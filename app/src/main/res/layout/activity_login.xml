@@ -1,38 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimaryDark"
+    android:orientation="vertical"
+    android:background="@color/dark"
     android:padding="10dp"
+    android:weightSum="3"
     tools:context=".LoginActivity">
 
-    <TextView
-        android:id="@+id/txt_login"
-        android:layout_width="wrap_content"
-        android:layout_marginTop="50dp"
-        android:layout_alignParentTop="true"
-        android:layout_height="wrap_content"
-        android:text="Login"
-        android:layout_centerHorizontal="true"
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
-        android:textColor="#FFFFFF"
-        android:textSize="50dp"
-        android:textStyle="bold" />
+    <LinearLayout
+        android:id="@+id/linear1"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
 
 
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_marginTop="50dp"
-        android:layout_below="@id/txt_login"
-        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/txt_login"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_height="wrap_content"
+            android:text="login"
+            android:layout_centerHorizontal="true"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+            android:textColor="#FFFFFF"
+            android:textSize="50dp"
+            />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linear2"
+        android:orientation="vertical"
+        android:layout_weight="2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
 
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="50dp"
             android:layout_marginRight="10dp"
             android:layout_marginLeft="10dp"
             android:elevation="10dp"
@@ -44,25 +58,25 @@
                 android:layout_height="match_parent"
                 android:layout_centerVertical="true"
                 android:textSize="20sp"
-                android:paddingStart="15dp"
+                android:paddingStart="5dp"
+                android:drawablePadding="10dp"
+                android:drawableStart="@drawable/ic_email_black_24dp"
                 android:inputType="textEmailAddress"
                 android:textColor="#000"
-                android:id="@+id/input_email_2"
+                android:id="@+id/input_email2"
                 android:background="@null"
                 android:hint="Email"
                 />
-
 
         </RelativeLayout>
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="20dp"
             android:layout_marginRight="10dp"
             android:layout_marginLeft="10dp"
             android:elevation="10dp"
-            android:layout_below="@id/relLayout1"
             android:background="@drawable/white_border"
             android:id="@+id/relLayout2">
 
@@ -71,10 +85,12 @@
                 android:layout_height="match_parent"
                 android:layout_centerVertical="true"
                 android:textSize="20sp"
-                android:paddingStart="15dp"
+                android:paddingStart="5dp"
+                android:drawablePadding="10dp"
+                android:drawableStart="@drawable/ic_lock_black_24dp"
                 android:inputType="textPassword"
                 android:textColor="#000"
-                android:id="@+id/input_password_2"
+                android:id="@+id/input_password2"
                 android:background="@null"
                 android:hint="Password"
                 />
@@ -82,39 +98,38 @@
 
         </RelativeLayout>
 
+
+
         <Button
             android:id="@+id/btn_login"
             android:text="Login"
             android:textSize="20sp"
             android:textAllCaps="false"
-            android:textStyle="bold"
             android:textColor="#FFFFFF"
             android:layout_marginTop="30dp"
-            android:layout_below="@id/relLayout2"
             android:layout_marginRight="10dp"
             android:layout_marginLeft="10dp"
             android:background="@drawable/btn_back"
             android:layout_width="match_parent"
             android:layout_height="50dp" />
 
+
         <RelativeLayout
             android:layout_width="wrap_content"
-            android:layout_below="@id/btn_login"
-            android:layout_marginTop="10dp"
-            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:layout_gravity="center_horizontal"
             android:layout_height="wrap_content">
 
             <TextView
                 android:id="@+id/txt_already"
                 android:textColor="#FFFFFF"
                 android:textSize="15dp"
-                android:textStyle="bold"
                 android:text="Don't have a account?"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
             <TextView
-                android:id="@+id/txt_signup_here"
+                android:id="@+id/txt_sign_up_here"
                 android:textColor="#4C82DE"
                 android:textSize="15dp"
                 android:textStyle="bold"
@@ -124,6 +139,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
         </RelativeLayout>
-    </RelativeLayout>
 
-</RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

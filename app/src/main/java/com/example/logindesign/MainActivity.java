@@ -10,21 +10,21 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
+    Button buttonSIgnUp;
     EditText editTextEmail, editTextPass, editTextRePass;
     TextView textViewLogin;
-    Button buttonSingUp;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        buttonSIgnUp = (Button) findViewById(R.id.btn_sign_up);
 
         editTextEmail = (EditText) findViewById(R.id.input_email);
         editTextPass = (EditText) findViewById(R.id.input_password);
         editTextRePass = (EditText) findViewById(R.id.input_re_password);
 
         textViewLogin = (TextView) findViewById(R.id.txt_login_here);
-
-        buttonSingUp = (Button) findViewById(R.id.btn_sign_up);
 
         textViewLogin.setOnClickListener(new View.OnClickListener() {
             @Override

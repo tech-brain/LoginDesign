@@ -10,8 +10,8 @@ import android.widget.TextView;
 
 public class LoginActivity extends AppCompatActivity {
 
-    EditText editTextEmail, editTextPass;
     Button buttonLogin;
+    EditText editTextEmail, editTextPass;
     TextView textViewSignUp;
 
     @Override
@@ -19,12 +19,12 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        editTextEmail = (EditText) findViewById(R.id.input_email_2);
-        editTextPass = (EditText) findViewById(R.id.input_password_2);
-
-        textViewSignUp = findViewById(R.id.txt_signup_here);
-
         buttonLogin = (Button) findViewById(R.id.btn_login);
+
+        editTextEmail = (EditText) findViewById(R.id.input_email2);
+        editTextPass = (EditText) findViewById(R.id.input_password2);
+
+        textViewSignUp = (TextView) findViewById(R.id.txt_sign_up_here);
 
         textViewSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
